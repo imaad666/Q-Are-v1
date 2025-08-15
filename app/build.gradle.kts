@@ -49,6 +49,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.core)
+    implementation(libs.androidx.material.icons.extended)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,11 +65,19 @@ dependencies {
     // For picking images from gallery
     implementation("androidx.activity:activity-ktx:1.9.0")
 
-    // ZXing for QR code decoding
+    // ZXing for QR code decoding and generation
     implementation("com.google.zxing:core:3.5.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
-    //QR parser woooooooo
+    // ML Kit for additional barcode scanning
     implementation("com.google.mlkit:barcode-scanning:17.2.0")
 
-    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    // Navigation Compose
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+
+    // SharedPreferences
+    implementation("androidx.preference:preference-ktx:1.2.1")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 }
